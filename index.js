@@ -7,13 +7,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Serve apple-app-site-association with correct Content-Type
-app.get("/.well-known/apple-app-site-association", (req, res) => {
+app.use("/.well-known/apple-app-site-association", (req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.sendFile(path.join(__dirname, ".well-known", "apple-app-site-association"));
 });
 
 // If you also serve Android assetlinks.json (optional)
-app.get("/.well-known/assetlinks.json", (req, res) => {
+app.use("/.well-known/assetlinks.json", (req, res) => {
   res.setHeader("Content-Type", "application/json");
   res.sendFile(path.join(__dirname, ".well-known", "assetlinks.json"));
 });
