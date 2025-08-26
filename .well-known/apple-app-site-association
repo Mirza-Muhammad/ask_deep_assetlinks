@@ -3,9 +3,14 @@
     "apps": [],
     "details": [
       {
-        "appID": "6746576585.com.devsrank.aichatbotpro", 
+        "appID": "T2R8MDX829.com.devsrank.aichatbotpro", 
         "paths": [ "*" ]
       }
+    ]
+  },
+   "webcredentials": {
+    "apps": [
+      "T2R8MDX829.com.devsrank.aichatbotpro"
     ]
   }
 }
