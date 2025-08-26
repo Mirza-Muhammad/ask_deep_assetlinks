@@ -1,0 +1,23 @@
+{
+  "name": "vercel-ask-deep-assetlinks",
+  "version": "1.0.0",
+  "description": "ask deep assetlinks",
+  "main": "index.js",
+  "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vercel dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "path": "^0.12.7"
+  }
+}

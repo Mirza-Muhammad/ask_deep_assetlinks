@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.devsrank.aichatbotpro",
+      "sha256_cert_fingerprints": [
+        "6F:91:D9:93:C0:22:88:9D:12:7A:D8:2A:14:A6:34:32:AB:FF:67:85:FD:C4:8E:1C:6F:3F:7A:2C:83:C3:DB:91"
+      ]
+    }
+  }
+]

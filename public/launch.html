@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Open in App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script>
+    const UNIVERSAL_LINK = "https://ask-deep-assetlinks.vercel.app/"; 
+    const APP_STORE_URL  = "https://apps.apple.com/app/id6740520360";
+    const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.devsrank.aichatbotpro";
+
+    function isIOS()     { return /iphone|ipad|ipod/i.test(navigator.userAgent); }
+    function isAndroid() { return /android/i.test(navigator.userAgent); }
+
+    function openAppThenFallback() {
+      const TIMEOUT_MS = 2000;
+      const start = Date.now();
+
+      // Try opening app
+      // window.location.href = UNIVERSAL_LINK;
+
+      // After delay, if still here, redirect to store
+      setTimeout(() => {
+        const elapsed = Date.now() - start;
+        if (elapsed < TIMEOUT_MS + 100) {
+          if (isIOS()) {
+            window.location.href = APP_STORE_URL;
+          } else if (isAndroid()) {
+            window.location.href = PLAY_STORE_URL;
+          } else {
+            document.getElementById("install-area").style.display = "block";
+          }
+        }
+      }, TIMEOUT_MS);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      openAppThenFallback();
+    });
+  </script>
+</head>
+<body>
+  <h1>Opening app…</h1>
+  <p>If nothing happens, download the app below:</p>
+
+  <div id="install-area" style="display:none;">
+    <a href="https://apps.apple.com/app/id6740520360">Download on iOS</a><br />
+    <a href="https://play.google.com/store/apps/details?id=com.devsrank.aichatbotpro">Download on Android</a>
+  </div>
+</body>
+</html>
